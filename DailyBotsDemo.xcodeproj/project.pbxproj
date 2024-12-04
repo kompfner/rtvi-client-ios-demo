@@ -313,6 +313,7 @@
 			mainGroup = 90031F9A2C616EE700408370;
 			packageReferences = (
 				21682F542D00AEB300FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */,
+				21682F582D00B34E00FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */,
 			);
 			productRefGroup = 90031FA42C616EE700408370 /* Products */;
 			projectDirPath = "";
@@ -705,6 +706,10 @@
 		21682F542D00AEB300FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../rtvi-client-ios-ws-prototype";
+		};
+		21682F582D00B34E00FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../rtvi-client-ios-daily";
 		};
 /* End XCLocalSwiftPackageReference section */
 
