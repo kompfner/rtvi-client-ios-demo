@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = 2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */; };
+		2174C82B2D00C1FC00B319DC /* RTVIClientIOSDaily in Frameworks */ = {isa = PBXBuildFile; productRef = 2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */; };
 		90031FA72C616EE700408370 /* DailyBotsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA62C616EE700408370 /* DailyBotsDemoApp.swift */; };
 		90031FA92C616EE700408370 /* PreJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA82C616EE700408370 /* PreJoinView.swift */; };
 		90031FAB2C616EE800408370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90031FAA2C616EE800408370 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2174C82B2D00C1FC00B319DC /* RTVIClientIOSDaily in Frameworks */,
 				90031FD22C6171F200408370 /* RTVIClientIOS in Frameworks */,
 				2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */,
 			);
@@ -233,6 +235,7 @@
 			packageProductDependencies = (
 				90031FD12C6171F200408370 /* RTVIClientIOS */,
 				2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */,
+				2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */,
 			);
 			productName = DailyBotsDemo;
 			productReference = 90031FA32C616EE700408370 /* DailyBotsDemo.app */;
@@ -713,6 +716,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */;
 			productName = RTVIClientIOSWSPrototype;
+		};
+		2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */;
+			productName = RTVIClientIOSDaily;
 		};
 		90031FD12C6171F200408370 /* RTVIClientIOS */ = {
 			isa = XCSwiftPackageProductDependency;
