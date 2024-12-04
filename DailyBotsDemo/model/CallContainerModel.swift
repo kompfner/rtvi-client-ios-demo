@@ -1,6 +1,6 @@
 import SwiftUI
 
-import RTVIClientIOSDaily
+import RTVIClientIOSWSPrototype
 import RTVIClientIOS
 
 class CallContainerModel: ObservableObject {
