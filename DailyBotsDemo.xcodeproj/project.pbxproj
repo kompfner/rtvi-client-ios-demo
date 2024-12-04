@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21682F572D00AFDC00FC2A37 /* RTVIClientIOSWSPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = 21682F562D00AFDC00FC2A37 /* RTVIClientIOSWSPrototype */; };
+		2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = 2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */; };
 		90031FA72C616EE700408370 /* DailyBotsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA62C616EE700408370 /* DailyBotsDemoApp.swift */; };
 		90031FA92C616EE700408370 /* PreJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA82C616EE700408370 /* PreJoinView.swift */; };
 		90031FAB2C616EE800408370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90031FAA2C616EE800408370 /* Assets.xcassets */; };
@@ -77,7 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90031FD22C6171F200408370 /* RTVIClientIOS in Frameworks */,
-				21682F572D00AFDC00FC2A37 /* RTVIClientIOSWSPrototype in Frameworks */,
+				2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,12 +232,7 @@
 			name = DailyBotsDemo;
 			packageProductDependencies = (
 				90031FD12C6171F200408370 /* RTVIClientIOS */,
-				90031FD42C61720200408370 /* RTVIClientIOSDaily */,
-				90ABB9AA2C753A58000D9CC7 /* RTVIClientIOSDaily */,
-				90ABB9B02C753F03000D9CC7 /* RTVIClientIOSDaily */,
-				90ABB9C92C778AF9000D9CC7 /* RTVIClientIOSDaily */,
-				90AB8E4C2CB58CF100AE37B3 /* RTVIClientIOSDaily */,
-				21682F562D00AFDC00FC2A37 /* RTVIClientIOSWSPrototype */,
+				2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */,
 			);
 			productName = DailyBotsDemo;
 			productReference = 90031FA32C616EE700408370 /* DailyBotsDemo.app */;
@@ -312,8 +307,8 @@
 			);
 			mainGroup = 90031F9A2C616EE700408370;
 			packageReferences = (
-				21682F542D00AEB300FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */,
-				21682F582D00B34E00FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */,
+				2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */,
+				2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */,
 			);
 			productRefGroup = 90031FA42C616EE700408370 /* Products */;
 			projectDirPath = "";
@@ -703,45 +698,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		21682F542D00AEB300FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */ = {
+		2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../rtvi-client-ios-ws-prototype";
 		};
-		21682F582D00B34E00FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */ = {
+		2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../rtvi-client-ios-daily";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		21682F562D00AFDC00FC2A37 /* RTVIClientIOSWSPrototype */ = {
+		2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21682F542D00AEB300FC2A37 /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */;
+			package = 2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */;
 			productName = RTVIClientIOSWSPrototype;
 		};
 		90031FD12C6171F200408370 /* RTVIClientIOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RTVIClientIOS;
-		};
-		90031FD42C61720200408370 /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOSDaily;
-		};
-		90AB8E4C2CB58CF100AE37B3 /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOSDaily;
-		};
-		90ABB9AA2C753A58000D9CC7 /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOSDaily;
-		};
-		90ABB9B02C753F03000D9CC7 /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOSDaily;
-		};
-		90ABB9C92C778AF9000D9CC7 /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOSDaily;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -96,7 +96,7 @@ class CallContainerModel: ObservableObject {
         }
         
         let currentSettings = SettingsManager.getSettings()
-        self.rtviClientIOS = DailyVoiceClient.init(options: self.createOptions(baseUrl: baseUrl, dailyApiKey: dailyApiKey, enableMic: currentSettings.enableMic))
+        self.rtviClientIOS = WSPrototypeVoiceClient.init(options: self.createOptions(baseUrl: baseUrl, dailyApiKey: dailyApiKey, enableMic: currentSettings.enableMic))
         self.rtviClientIOS?.delegate = self
         self.rtviClientIOS?.start() { result in
             if case .failure(let error) = result {
