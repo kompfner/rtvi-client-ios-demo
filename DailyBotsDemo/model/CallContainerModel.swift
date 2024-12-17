@@ -1,6 +1,7 @@
 import SwiftUI
 
 import RTVIClientIOSGeminiLiveWebSocket
+import RTVIClientIOSDaily
 import RTVIClientIOS
 
 class CallContainerModel: ObservableObject {
@@ -31,7 +32,21 @@ class CallContainerModel: ObservableObject {
         RTVIClientIOS.setLogLevel(.warn)
     }
     
-    private func createOptions(baseUrl: String, dailyApiKey:String, enableMic:Bool) -> RTVIClientOptions {
+    private func createOptions_GeminiLiveWebSocket(apiKey: String, enableMic: Bool) -> RTVIClientOptions {
+        return .init(
+            enableMic: enableMic,
+            params: .init(config: [
+                .init(
+                    service: "llm",
+                    options: [
+                        .init(name: "api_key", value: .string(apiKey))
+                    ]
+                )
+            ])
+        )
+    }
+    
+    private func createOptions_Daily(baseUrl: String, dailyApiKey:String, enableMic:Bool) -> RTVIClientOptions {
         let clientConfigOptions = [
             ServiceConfig(
                 service: "llm",
@@ -96,7 +111,8 @@ class CallContainerModel: ObservableObject {
         }
         
         let currentSettings = SettingsManager.getSettings()
-        self.rtviClientIOS = WSPrototypeVoiceClient.init(options: self.createOptions(baseUrl: baseUrl, dailyApiKey: dailyApiKey, enableMic: currentSettings.enableMic))
+//        self.rtviClientIOS = DailyVoiceClient.init(options: self.createOptions_Daily(baseUrl: baseUrl, dailyApiKey: dailyApiKey, enableMic: currentSettings.enableMic))
+        self.rtviClientIOS = GeminiLiveWebSocketVoiceClient(options: self.createOptions_GeminiLiveWebSocket(apiKey: "<api key>", enableMic: currentSettings.enableMic))
         self.rtviClientIOS?.delegate = self
         self.rtviClientIOS?.start() { result in
             if case .failure(let error) = result {

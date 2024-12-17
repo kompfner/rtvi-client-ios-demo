@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219217AE2D11E3FA00E3102A /* PipecatClientIOSDaily in Frameworks */ = {isa = PBXBuildFile; productRef = 219217AD2D11E3FA00E3102A /* PipecatClientIOSDaily */; };
 		21AEB0EC2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */; };
 		90031FA72C616EE700408370 /* DailyBotsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA62C616EE700408370 /* DailyBotsDemoApp.swift */; };
 		90031FA92C616EE700408370 /* PreJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA82C616EE700408370 /* PreJoinView.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219217AE2D11E3FA00E3102A /* PipecatClientIOSDaily in Frameworks */,
 				21AEB0EC2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +232,7 @@
 			name = DailyBotsDemo;
 			packageProductDependencies = (
 				21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */,
+				219217AD2D11E3FA00E3102A /* PipecatClientIOSDaily */,
 			);
 			productName = DailyBotsDemo;
 			productReference = 90031FA32C616EE700408370 /* DailyBotsDemo.app */;
@@ -304,8 +307,8 @@
 			);
 			mainGroup = 90031F9A2C616EE700408370;
 			packageReferences = (
-				21AEB0E62D09F0D900C40669 /* XCRemoteSwiftPackageReference "pipecat-client-ios-daily" */,
 				21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */,
+				219217AC2D11E3F200E3102A /* XCLocalSwiftPackageReference "../pipecat-client-ios-daily" */,
 			);
 			productRefGroup = 90031FA42C616EE700408370 /* Products */;
 			projectDirPath = "";
@@ -695,24 +698,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		219217AC2D11E3F200E3102A /* XCLocalSwiftPackageReference "../pipecat-client-ios-daily" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../pipecat-client-ios-daily";
+		};
 		21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../pipecat-client-ios-gemini-live-websocket";
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		21AEB0E62D09F0D900C40669 /* XCRemoteSwiftPackageReference "pipecat-client-ios-daily" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pipecat-ai/pipecat-client-ios-daily";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
+		219217AD2D11E3FA00E3102A /* PipecatClientIOSDaily */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 219217AC2D11E3F200E3102A /* XCLocalSwiftPackageReference "../pipecat-client-ios-daily" */;
+			productName = PipecatClientIOSDaily;
+		};
 		21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */;
