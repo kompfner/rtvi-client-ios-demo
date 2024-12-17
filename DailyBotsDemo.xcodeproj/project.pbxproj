@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = 2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */; };
-		2174C82B2D00C1FC00B319DC /* RTVIClientIOSDaily in Frameworks */ = {isa = PBXBuildFile; productRef = 2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */; };
+		21AEB0EC2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */; };
 		90031FA72C616EE700408370 /* DailyBotsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA62C616EE700408370 /* DailyBotsDemoApp.swift */; };
 		90031FA92C616EE700408370 /* PreJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FA82C616EE700408370 /* PreJoinView.swift */; };
 		90031FAB2C616EE800408370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90031FAA2C616EE800408370 /* Assets.xcassets */; };
@@ -16,7 +15,6 @@
 		90031FB82C616EE900408370 /* DailyBotsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FB72C616EE900408370 /* DailyBotsDemoTests.swift */; };
 		90031FC22C616EE900408370 /* DailyBotsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FC12C616EE900408370 /* DailyBotsDemoUITests.swift */; };
 		90031FC42C616EE900408370 /* DailyBotsDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FC32C616EE900408370 /* DailyBotsDemoUITestsLaunchTests.swift */; };
-		90031FD22C6171F200408370 /* RTVIClientIOS in Frameworks */ = {isa = PBXBuildFile; productRef = 90031FD12C6171F200408370 /* RTVIClientIOS */; };
 		90031FDC2C6D5DD700408370 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90031FDB2C6D5DD700408370 /* ToastModifier.swift */; };
 		90ABB98E2C735ED6000D9CC7 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABB98D2C735ED6000D9CC7 /* MeetingView.swift */; };
 		90ABB9902C736A8B000D9CC7 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABB98F2C736A8B000D9CC7 /* WaveformView.swift */; };
@@ -77,9 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2174C82B2D00C1FC00B319DC /* RTVIClientIOSDaily in Frameworks */,
-				90031FD22C6171F200408370 /* RTVIClientIOS in Frameworks */,
-				2174C8252D00B7A200B319DC /* RTVIClientIOSWSPrototype in Frameworks */,
+				21AEB0EC2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +229,7 @@
 			);
 			name = DailyBotsDemo;
 			packageProductDependencies = (
-				90031FD12C6171F200408370 /* RTVIClientIOS */,
-				2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */,
-				2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */,
+				21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */,
 			);
 			productName = DailyBotsDemo;
 			productReference = 90031FA32C616EE700408370 /* DailyBotsDemo.app */;
@@ -310,8 +304,8 @@
 			);
 			mainGroup = 90031F9A2C616EE700408370;
 			packageReferences = (
-				2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */,
-				2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */,
+				21AEB0E62D09F0D900C40669 /* XCRemoteSwiftPackageReference "pipecat-client-ios-daily" */,
+				21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */,
 			);
 			productRefGroup = 90031FA42C616EE700408370 /* Products */;
 			projectDirPath = "";
@@ -701,30 +695,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */ = {
+		21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../rtvi-client-ios-ws-prototype";
-		};
-		2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../rtvi-client-ios-daily";
+			relativePath = "../pipecat-client-ios-gemini-live-websocket";
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		21AEB0E62D09F0D900C40669 /* XCRemoteSwiftPackageReference "pipecat-client-ios-daily" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pipecat-ai/pipecat-client-ios-daily";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		2174C8242D00B7A200B319DC /* RTVIClientIOSWSPrototype */ = {
+		21AEB0EB2D10B32E00C40669 /* PipecatClientIOSGeminiLiveWebSocket */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2174C8232D00B79200B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-ws-prototype" */;
-			productName = RTVIClientIOSWSPrototype;
-		};
-		2174C82A2D00C1FC00B319DC /* RTVIClientIOSDaily */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2174C8292D00B96400B319DC /* XCLocalSwiftPackageReference "../rtvi-client-ios-daily" */;
-			productName = RTVIClientIOSDaily;
-		};
-		90031FD12C6171F200408370 /* RTVIClientIOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RTVIClientIOS;
+			package = 21AEB0EA2D10B32400C40669 /* XCLocalSwiftPackageReference "../pipecat-client-ios-gemini-live-websocket" */;
+			productName = PipecatClientIOSGeminiLiveWebSocket;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

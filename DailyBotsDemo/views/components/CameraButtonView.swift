@@ -1,6 +1,6 @@
 import SwiftUI
 import RTVIClientIOS
-import RTVIClientIOSWSPrototype
+import RTVIClientIOSGeminiLiveWebSocket
 
 struct CameraButtonView: View {
     var trackId: MediaTrackId?
