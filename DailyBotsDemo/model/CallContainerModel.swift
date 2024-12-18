@@ -49,6 +49,15 @@ class CallContainerModel: ObservableObject {
                                 "role": .string("user"),
                                 "content": .string("I need your help planning my next vacation.")
                             ])
+                        ])),
+                        .init(name: "generation_config", value: .object([
+                            "speech_config": .object([
+                                "voice_config": .object([
+                                    "prebuilt_voice_config": .object([
+                                        "voice_name": .string("Puck") // "Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede"
+                                    ])
+                                ])
+                            ])
                         ]))
                     ]
                 )
