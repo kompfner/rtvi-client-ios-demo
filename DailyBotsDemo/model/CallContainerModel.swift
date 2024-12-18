@@ -39,7 +39,17 @@ class CallContainerModel: ObservableObject {
                 .init(
                     service: "llm",
                     options: [
-                        .init(name: "api_key", value: .string(apiKey))
+                        .init(name: "api_key", value: .string(apiKey)),
+                        .init(name: "initial_messages", value: .array([
+                            .object([
+                                "role": .string("system"),
+                                "content": .string("You are a assistant called ExampleBot. You can ask me anything. Keep responses brief and legible. Your responses will converted to audio. Please do not include any special characters in your response other than '!' or '?'. Start by briefly introducing yourself.")
+                            ]),
+                            .object([
+                                "role": .string("user"),
+                                "content": .string("I need your help planning my next vacation.")
+                            ])
+                        ]))
                     ]
                 )
             ])
