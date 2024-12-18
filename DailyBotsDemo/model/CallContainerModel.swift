@@ -112,7 +112,7 @@ class CallContainerModel: ObservableObject {
         
         let currentSettings = SettingsManager.getSettings()
 //        self.rtviClientIOS = DailyVoiceClient.init(options: self.createOptions_Daily(baseUrl: baseUrl, dailyApiKey: dailyApiKey, enableMic: currentSettings.enableMic))
-        self.rtviClientIOS = GeminiLiveWebSocketVoiceClient(options: self.createOptions_GeminiLiveWebSocket(apiKey: "<api key>", enableMic: currentSettings.enableMic))
+        self.rtviClientIOS = GeminiLiveWebSocketVoiceClient(options: self.createOptions_GeminiLiveWebSocket(apiKey: dailyApiKey, enableMic: currentSettings.enableMic))
         self.rtviClientIOS?.delegate = self
         self.rtviClientIOS?.start() { result in
             if case .failure(let error) = result {
