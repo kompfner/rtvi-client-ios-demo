@@ -134,6 +134,7 @@ class CallContainerModel: ObservableObject {
         self.rtviClientIOS = GeminiLiveWebSocketVoiceClient(options: self.createOptions_GeminiLiveWebSocket(apiKey: dailyApiKey, enableMic: currentSettings.enableMic))
         self.rtviClientIOS?.delegate = self
         self.rtviClientIOS?.start() { result in
+            print("[pk] initial selected mic: \(String(describing: self.rtviClientIOS?.selectedMic))")
             if case .failure(let error) = result {
                 self.showError(message: error.localizedDescription)
                 self.rtviClientIOS = nil
@@ -175,14 +176,22 @@ class CallContainerModel: ObservableObject {
     
     @MainActor
     func toggleCamInput() {
-        self.rtviClientIOS?.enableCam(enable: !self.isCamEnabled) { result in
-            switch result {
-            case .success():
-                self.isCamEnabled = self.rtviClientIOS?.isCamEnabled ?? false
-            case .failure(let error):
-                self.showError(message: error.localizedDescription)
-            }
-        }
+        let actionRequest: ActionRequest = .init(
+            service: "llm",
+            action: "append_to_messages",
+            arguments: [.init(
+                name: "messages",
+                value: .array([
+                    .object([
+                        "role": .string("user"),
+                        "content": .string("tell me a joke")
+                    ])
+                ])
+            )]
+        )
+        self.rtviClientIOS?.action(action: actionRequest, completion: { result in
+            print("[pk] append_to_messages action completed! result: \(result)")
+        })
     }
     
     private func startTimer(withExpirationTime expirationTime: Int) {
@@ -234,6 +243,37 @@ extension CallContainerModel:RTVIClientDelegate, LLMHelperDelegate {
         if let expirationTime = self.rtviClientIOS?.expiry() {
             self.startTimer(withExpirationTime: expirationTime)
         }
+    }
+    
+    func onBotConnected(participant: Participant) {
+        print("[pk] onBotConnected: \(participant)")
+    }
+    
+    func onBotDisconnected(participant: Participant) {
+        print("[pk] onBotDisconnected: \(participant)")
+    }
+    
+    func onBotStartedSpeaking(participant: Participant) {
+        print("[pk] onBotStartedSpeaking: \(participant)")
+    }
+    
+    func onBotStoppedSpeaking(participant: Participant) {
+        print("[pk] onBotStoppedSpeaking: \(participant)")
+    }
+    
+    func onUserStartedSpeaking() {
+        print("[pk] onUserStartedSpeaking")
+    }
+    
+    func onMicUpdated(mic: MediaDeviceInfo?) {
+        Task { @MainActor in
+            print("[pk] onMicUpdated: \(String(describing: mic))")
+            print("[pk] new selected mic: \(String(describing: rtviClientIOS?.selectedMic))")
+        }
+    }
+    
+    func onAvailableMicsUpdated(mics: [MediaDeviceInfo]) {
+        print("[pk] onAvailableMicsUpdated: \(mics)")
     }
     
     @MainActor
