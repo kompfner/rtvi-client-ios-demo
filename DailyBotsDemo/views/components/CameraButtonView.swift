@@ -18,9 +18,11 @@ struct CameraButtonView: View {
                     .frame(width: circleSize)
                 
                 if (!isMuted){
-                    VoiceClientVideoViewSwiftUI(voiceClientTrack: trackId, videoScaleMode: .fill)
-                        .aspectRatio(1, contentMode: .fit)
-                        .clipShape(Circle())
+                    // Video not yet supported with RTVIClientIOSGeminiLiveWebSocket
+                    EmptyView()
+//                    VoiceClientVideoViewSwiftUI(voiceClientTrack: trackId, videoScaleMode: .fill)
+//                        .aspectRatio(1, contentMode: .fit)
+//                        .clipShape(Circle())
                 } else {
                     Circle()
                         .fill(Color.disabledVision)
